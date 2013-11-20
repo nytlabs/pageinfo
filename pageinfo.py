@@ -62,5 +62,5 @@ def get_meta(url):
 		data = "Oops, something went wrong"
 
 
-	return json.dumps(data)
+	return data
 
