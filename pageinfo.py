@@ -5,6 +5,7 @@ import json
 import re
 from urlparse import urlparse
 
+#get title, description, favicon, twitter card, facebook open graph data
 def get_meta(url):
 	data = {}
 	data["title"] = ""
@@ -61,6 +62,37 @@ def get_meta(url):
 	except:
 		data = "Oops, something went wrong"
 
+	return data
+
+
+#just get the title
+def get_title(url):
+	data = {}
+	data["title"] = ""
+
+	try:
+		if url is not None: #make sure we have a url
+			page=requests.get(url)
+			if page.status_code == 200: 
+				soup = BeautifulSoup(page.text)
+				
+				#get title
+				if soup.title.string:
+					data["title"] = soup.title.string
+
+			#return error if status code is anything but 200
+			else:
+				data = "URL returned status %s" % page.status_code
+		else:
+			data = "No url provided"
+
+	except HTMLParseError:
+		data = "Error parsing page data"
+
+	except:
+		data = "Oops, something went wrong"
 
 	return data
+
+
 
