@@ -4,6 +4,7 @@ import requests
 import json
 import re
 from urlparse import urlparse
+from urlparse import urljoin
 
 #get title, description, favicon, twitter card, facebook open graph data
 def get_meta(url):
@@ -26,8 +27,13 @@ def get_meta(url):
 
 				#get favicon
 				parsed_uri = urlparse( url )
-				domain = '{uri.scheme}://{uri.netloc}/'.format(uri=parsed_uri)
-				data["favicon"] = domain + 'favicon.ico'
+				if soup.find("link", rel="shortcut icon"):
+					icon_rel = soup.find("link", rel="shortcut icon")["href"]
+					icon_abs = urljoin( url, icon_rel )
+					data["favicon"] = icon_abs
+				else:
+					domain = '{uri.scheme}://{uri.netloc}/'.format(uri=parsed_uri)
+					data["favicon"] = domain + 'favicon.ico'
 
 				#get description
 				if soup.find('meta', attrs={'name':'description'}):
