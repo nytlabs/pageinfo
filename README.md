@@ -45,3 +45,9 @@ The above code will return a dict with the available page information. Here's a 
     
     	"title": "A Gift From Steve Jobs Returns Home - NYTimes.com"
 	}
+
+Alternately, if you just need page titles and want a minimal response, use: 
+
+	import pageinfo
+	
+	pageinfo.get_title('http://www.myurl.com')
