@@ -85,8 +85,8 @@ def get_title(url, html):
   data["title"] = ""
 
   try:
-    # default to using html + url
-    if html is not None and url is not None:
+    # default to using html
+    if html is not None:
       soup = BeautifulSoup(html)
 
     # or use the url
