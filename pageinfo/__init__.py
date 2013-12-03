@@ -1,1 +1,1 @@
-from pageinfo import get_meta, get_title
+from pageinfo import get_meta
