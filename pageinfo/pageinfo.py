@@ -8,7 +8,7 @@ from urlparse import urljoin
 
 
 #get title, description, favicon, twitter card, facebook open graph data
-def get_meta(url, html):
+def get_meta(url, html=None):
   data = {}
   data["title"] = ""
   data["description"] = None
