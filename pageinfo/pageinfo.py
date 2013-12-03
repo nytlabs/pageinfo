@@ -80,7 +80,7 @@ def get_meta(url, html=None):
 
 
 #just get the title
-def get_title(url, html):
+def get_title(url, html=None):
   data = {}
   data["title"] = ""
 
