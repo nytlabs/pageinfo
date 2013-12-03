@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='pageinfo',
-      version='0.2',
+      version='0.3',
       description='Tool for extracting basic information from web pages',
       url='https://github.com/nytlabs/pageinfo',
       keywords='metadata title web page url description twitter facebook',
@@ -11,7 +11,6 @@ setup(name='pageinfo',
       packages=['pageinfo'],
        install_requires=[
           'beautifulsoup4',
-          'requests',
           'lxml'
       ],
       zip_safe=False)
