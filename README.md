@@ -19,7 +19,7 @@ pageinfo is a simple module for extracting information from web pages. Currently
 
 ```python
 import pageinfo
-pageinfo.get_meta('http://www.myurl.com', self)
+pageinfo.get_meta('http://www.myurl.com')
 ```
 The first argument is the url you want to get info for and the second argument is the handler that is making the request (this assues pageinfo is being requested by a tornado server). The handler is required so that multiple requests can be made concurrently in a non-blocking fashion.
 
