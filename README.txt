@@ -3,6 +3,7 @@ pageinfo
 
 pageinfo is a simple module for extracting information from web pages. Currently, pageinfo will return the following from a url, where available:
 
+* Canonical
 * Title
 * Description
 * Favicon
@@ -23,6 +24,7 @@ pageinfo is a simple module for extracting information from web pages. Currently
 The above code will return a dict with the available page information. Here's a sample response for `http://www.nytimes.com/pages/technology/index.html`:
 
 	{
+        "canonical": "http://bits.blogs.nytimes.com/2013/11/20/a-gift-from-steve-jobs-returns-home/"
     	"twitter": {    	
         	"twitter:title": "A Gift From Steve Jobs Returns Home",
        		"twitter:image": "http://graphics8.nytimes.com/images/2013/11/18/technology/bits-brilliant-jobs/bits-brilliant-jobs-thumbLarge.jpg",
