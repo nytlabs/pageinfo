@@ -27,7 +27,7 @@ The above code will return a dict with the available page information. Here's a 
 
 ```javascript
 {   
-    "canonical": 
+    "canonical":"http://bits.blogs.nytimes.com/2013/11/20/a-gift-from-steve-jobs-returns-home/" 
     "twitter": {    
         "twitter:title": "A Gift From Steve Jobs Returns Home",
         "twitter:image": "http://graphics8.nytimes.com/images/2013/11/18/technology/bits-brilliant-jobs/bits-brilliant-jobs-thumbLarge.jpg",
